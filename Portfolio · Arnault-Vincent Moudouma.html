@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Arnault-Vincent Moudouma · Développeur web</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F5F6F1;--ink:#12261F;--mute:#55655E;--line:#D5DACF;--green:#0E5A3F;--gold:#E3AE1C;--card:#EBEEE4;--code:#12261F;--codeink:#E7EDE3;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0D1A15;--ink:#EAF0E6;--mute:#9DB0A6;--line:#25392F;--green:#4DBB8A;--gold:#F0BE3A;--card:#14261E;--code:#07110D;--codeink:#E7EDE3}}
+:root[data-theme="dark"]{--bg:#0D1A15;--ink:#EAF0E6;--mute:#9DB0A6;--line:#25392F;--green:#4DBB8A;--gold:#F0BE3A;--card:#14261E;--code:#07110D;--codeink:#E7EDE3}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 "Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;gap:16px;flex-wrap:wrap}
+nav b{font-weight:800;letter-spacing:-.01em}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+nav a{text-decoration:none;color:var(--mute);font-size:15px}
+nav a:hover{color:var(--ink)}
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center;padding:56px 0 88px}
+h1{font-size:clamp(46px,8vw,92px);line-height:.95;letter-spacing:-.04em;font-weight:800;margin:0 0 24px}
+h1 span{display:block;color:var(--green)}
+.role{font-size:22px;font-weight:600;margin:0 0 14px}
+.lead{color:var(--mute);max-width:46ch;margin:0 0 30px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 22px;border-radius:999px;text-decoration:none;font-weight:600;border:2px solid var(--ink)}
+.btn.p{background:var(--ink);color:var(--bg)}
+.btn:hover{background:var(--gold);border-color:var(--gold);color:#12261F}
+pre{background:var(--code);color:var(--codeink);border-radius:14px;padding:22px;margin:0;font:14px/1.7 ui-monospace,Menlo,Consolas,monospace;overflow-x:auto;border-left:6px solid var(--gold)}
+.k{color:#8FD6B2}.s{color:#F0BE3A}.c{color:#7D9488}
+section{padding:72px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(30px,4.5vw,44px);letter-spacing:-.03em;line-height:1.1;margin:0 0 36px;font-weight:800}
+.two{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+.skill{background:var(--card);border-radius:12px;padding:18px 18px 16px;border-bottom:4px solid var(--green)}
+.skill b{display:block;font-size:19px}
+.skill small{color:var(--mute)}
+.tl{list-style:none;margin:0;padding:0 0 0 28px;border-left:2px solid var(--green)}
+.tl li{position:relative;padding:0 0 44px}
+.tl li:last-child{padding-bottom:0}
+.tl li::before{content:"";position:absolute;left:-37px;top:8px;width:16px;height:16px;border-radius:50%;background:var(--gold);border:3px solid var(--bg);box-shadow:0 0 0 2px var(--green)}
+.tl h3{margin:0;font-size:22px;letter-spacing:-.01em}
+.tl .meta{color:var(--mute);margin:2px 0 12px}
+.tl ul{margin:0;padding-left:20px}
+.tl li li{padding:0 0 4px}.tl li li::before{display:none}
+.work{display:grid;gap:0}
+.work div{display:grid;grid-template-columns:200px 1fr;gap:24px;padding:22px 0;border-bottom:1px solid var(--line)}
+.work div:first-child{border-top:1px solid var(--line)}
+.work b{font-size:19px}.work p{margin:0;color:var(--mute)}
+.edu p{margin:0 0 22px}
+.edu b{font-size:19px}
+.edu span{color:var(--mute);display:block}
+.contact{background:var(--green);color:#fff;border-radius:22px;padding:48px;margin-bottom:56px}
+.contact h2{color:#fff;margin-bottom:12px}
+.contact p{margin:0 0 24px;max-width:48ch;opacity:.92}
+.contact a{display:block;font-size:clamp(20px,3.2vw,30px);font-weight:600;text-decoration:none;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.3);width:fit-content;max-width:100%;overflow-wrap:anywhere}
+.contact a:hover{border-color:var(--gold);color:var(--gold)}
+footer{padding:0 0 40px;color:var(--mute);font-size:14px}
+@media(max-width:760px){.hero,.two{grid-template-columns:1fr;gap:32px}.hero{padding:32px 0 56px}.work div{grid-template-columns:1fr;gap:6px}.contact{padding:32px 24px}section{padding:52px 0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav aria-label="Navigation principale">
+<b>A-V. Moudouma</b>
+<ul><li><a href="#apropos">À propos</a></li><li><a href="#competences">Compétences</a></li><li><a href="#parcours">Parcours</a></li><li><a href="#realisations">Réalisations</a></li><li><a href="#contact">Contact</a></li></ul>
+</nav>
+
+<header class="hero">
+<div>
+<h1>Arnault-Vincent <span>Moudouma</span></h1>
+<p class="role">Informaticien · Développeur web Laravel &amp; Angular</p>
+<p class="lead">Diplômé d'une licence professionnelle en informatique, je conçois des applications web complètes : une API solide côté serveur et une interface claire côté client.</p>
+<div class="btns"><a class="btn p" href="#contact">Me contacter</a><a class="btn" href="#realisations">Voir mes réalisations</a></div>
+</div>
+<pre aria-hidden="true"><span class="c">// Laravel : le CRUD</span>
+<span class="k">Route</span>::apiResource(
+  <span class="s">'clients'</span>,
+  ClientController::class
+);
+
+<span class="c">// Angular : l'interface</span>
+<span class="k">@Component</span>({
+  selector: <span class="s">'app-clients'</span>
+})
+<span class="k">export class</span> ClientsComponent {}</pre>
+</header>
+
+<section id="apropos">
+<div class="two">
+<h2>À propos</h2>
+<div>
+<p>Déterminé, sérieux et autonome, je m'investis pleinement dans chaque mission. Mon stage de six mois chez ANINF m'a permis de travailler sur de vrais projets web, du back-end Laravel au front-end Angular.</p>
+<p>Avant l'informatique, mon premier stage m'a appris la négociation, le suivi client et la fidélisation. J'aime comprendre le besoin de l'utilisateur avant d'écrire la première ligne de code.</p>
+</div>
+</div>
+</section>
+
+<section id="competences">
+<h2>Compétences</h2>
+<div class="skills">
+<div class="skill"><b>Angular</b><small>Front-end</small></div>
+<div class="skill"><b>JavaScript</b><small>Front-end</small></div>
+<div class="skill"><b>Laravel</b><small>Back-end</small></div>
+<div class="skill"><b>MySQL</b><small>Base de données</small></div>
+<div class="skill"><b>Linux</b><small>Environnement</small></div>
+<div class="skill"><b>Word &amp; Excel</b><small>Bureautique</small></div>
+</div>
+</section>
+
+<section id="parcours">
+<h2>Parcours</h2>
+<ul class="tl">
+<li><h3>Stagiaire développeur · ANINF</h3><p class="meta">Mars 2025 – septembre 2025</p>
+<ul><li>Mise en place d'un CRUD avec Laravel.</li><li>Création d'un module front-end avec Angular.</li><li>Création d'interfaces avec Angular.</li></ul></li>
+<li><h3>Stagiaire · Les Transports Citadins</h3><p class="meta">Août 2022 – octobre 2022</p>
+<ul><li>Création de visuels pour les réseaux sociaux de l'entreprise.</li><li>Élaboration du plan de communication.</li><li>Gestion du service d'accueil et rédaction des devis.</li></ul></li>
+</ul>
+</section>
+
+<section id="realisations">
+<h2>Réalisations</h2>
+<div class="work">
+<div><b>CRUD Laravel</b><p>Création, lecture, modification et suppression de données via Laravel, avec une base MySQL. Réalisé lors du stage chez ANINF.</p></div>
+<div><b>Module Angular</b><p>Développement d'un module front-end complet pour une application web, chez ANINF.</p></div>
+<div><b>Interfaces Angular</b><p>Conception d'écrans clairs et utilisables, branchés sur les données du back-end.</p></div>
+<div><b>Communication visuelle</b><p>Visuels pour les réseaux sociaux et plan de communication, chez Les Transports Citadins.</p></div>
+</div>
+</section>
+
+<section id="formation">
+<div class="two">
+<div><h2>Formation</h2>
+<div class="edu">
+<p><b>Licence professionnelle en informatique</b><span>Institut Supérieur de Technologie · 2025</span></p>
+<p><b>Baccalauréat D</b><span>Institut Immaculée Conception · 2020</span></p>
+</div></div>
+<div><h2>Langues et centres d'intérêt</h2>
+<div class="edu">
+<p><b>Français</b><span>Langue maternelle</span></p>
+<p><b>Anglais</b><span>Niveau intermédiaire</span></p>
+<p><b>Loisirs</b><span>Basketball, sport, lecture</span></p>
+</div></div>
+</div>
+</section>
+
+<section id="contact" style="border:0;padding-top:24px">
+<div class="contact">
+<h2>Travaillons ensemble</h2>
+<p>Je cherche un poste ou un stage de développeur web. Écris-moi ou appelle-moi.</p>
+<a href="mailto:arnault1234@gmail.com">arnault1234@gmail.com</a>
+<a href="tel:077781034">077781034</a>
+<a href="#contact" style="border:0;font-size:18px;font-weight:400">Owendo, Awoungou · Gabon</a>
+</div>
+</section>
+<footer>© 2026 Arnault-Vincent Moudouma</footer>
+</div>
+</body>
+</html>
